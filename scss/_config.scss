@@ -1,0 +1,25 @@
+// variables
+$cursive: 'Mrs Saint Delafield';
+
+// config
+html {
+  font-size: 125%
+}
+
+body {
+  font-size: 0.8rem;
+  color: white;
+
+  font-family: 'Open Sans'
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}

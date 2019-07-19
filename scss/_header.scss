@@ -1,0 +1,40 @@
+.header {
+  height: 100vh;
+  background-color: #080808;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-title {
+    font-family: $cursive;
+    font-size: 8rem;
+    color: rgba(242, 202, 195, 0.934);
+    margin-bottom: 3rem;
+  }
+
+  &-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+  }
+
+  &-email {
+    display: block;
+    margin-top: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s all ease;
+  
+    &:hover{
+      text-decoration: underline;
+      color: rgba(242, 202, 195, 0.934);
+    }
+  }
+}
