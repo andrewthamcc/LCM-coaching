@@ -13,9 +13,17 @@ body {
   font-family: 'Open Sans'
 }
 
-h1, h2, h3 {
+h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
