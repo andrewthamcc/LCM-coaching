@@ -1,76 +1,204 @@
 .header {
-  height: 100vh;
-  background-color: #080808;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 800;
+  transition: 0.5s all ease;
 
-  text-align: center;
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    &-title {
+      font-family: $cursive;
+      font-size: 2rem;
+      font-weight: 300;
+      color: white;
+      color: $secondaryColor;
 
-  &-title {
-    font-family: $cursive;
-    font-size: 8rem;
-    color: rgba(242, 202, 195, 0.934);
-    margin-bottom: 3rem;
-  }
-
-  &-subtitle {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-  }
-
-  &-email {
-    display: block;
-    margin-top: 1rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 2px;
-    transition: 0.3s color ease;
-  
-    &:hover{
-      color: rgba(242, 202, 195, 0.934);
+      // header title is not visible in index
+      &-index {
+        visibility: hidden;
+      }
     }
   }
 
-  &-social-list {
+  &-nav-list {
     display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    font-size: 1rem;
 
     &-item {
-      margin: 1rem;
+      margin: 0 1rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
 
     a {
-      color: white;
+      color: black;
       transition: 0.3s color ease;
+    }
 
-      &:hover {
-        color: rgba(242, 202, 195, 0.934);
-      }
+    a:hover,
+    a:focus {
+      color: $thirdColor;
+    }
+
+    &-white a {
+      color: #ffffff;
     }
   }
 }
 
-@media (max-width: 1110px){
+// header menu transition when added class
+.header.fill {
+  background-color: rgba(242, 202, 195, 0.9);
+
+  .header-nav-title {
+    color: #000000;
+  }
+
+  .header-nav-list-item a {
+    color: #000000;
+
+    &:hover,
+    &:focus {
+      color: $thirdColor;
+    }
+  }
+}
+
+// hamburger menu
+.header-nav-hamburger {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  background: none;
+  border: none;
+
+  // initially not displayed
+  display: none;
+
+  // hamburger menu lines
+  &-line {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    left: 0;
+    transition: 0.4s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 15px;
+    }
+    &:nth-child(4) {
+      top: 30px;
+    }
+  }
+
+  // transitions when class open is applied
+  &-line:nth-child(1).open {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+    background-color: $thirdColor;
+  }
+
+  &-line:nth-child(2).open {
+    transform: rotate(45deg);
+    background-color: $thirdColor;
+  }
+
+  &-line:nth-child(3).open {
+    transform: rotate(-45deg);
+    background-color: $thirdColor;
+  }
+
+  &-line:nth-child(4).open {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+    background-color: $thirdColor;
+  }
+}
+
+@media (max-width: 1110px) {
   .header-title {
     font-size: 7rem;
   }
 }
 
-@media (max-width: 970px){
+@media (max-width: 970px) {
   .header-title {
     font-size: 5rem;
     margin-bottom: 1rem;
   }
+
+  .header-nav-hamburger-index .header-nav-hamburger-line {
+    background-color: #222222;
+  }
+
+  // repositioning the nav list as an overlay
+  .header-nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s opacity ease;
+
+    visibility: hidden;
+
+    &-item {
+      margin: 1rem 0;
+      font-size: 3rem;
+    }
+
+    a {
+      color: black;
+      transition: 0.3s color ease;
+
+      &:hover,
+      &:focus {
+        color: $thirdColor;
+      }
+    }
+
+    // transition when menu class of open is added
+    &.open {
+      visibility: visible;
+      height: 100vh;
+      opacity: 1;
+      background-color: rgba(242, 202, 195, 0.9);
+    }
+  }
+
+  // display hamburger menu button and place on very top
+  .header-nav-hamburger {
+    display: block;
+    z-index: 999;
+  }
 }
 
-@media (max-width: 715px){
+@media (max-width: 715px) {
   .header-title {
     font-size: 4rem;
     margin-bottom: 0.5rem;
@@ -86,15 +214,37 @@
   }
 }
 
-@media (max-width: 560px){
-   .header-title {
+@media (max-width: 645px) {
+  .header-nav-hamburger-index .header-nav-hamburger-line {
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-title {
     font-size: 2.75rem;
   }
 }
 
-@media (max-width: 475px){
-   .header-subtitle {
+@media (max-width: 475px) {
+  .header-subtitle {
     font-size: 0.75rem;
     letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-nav-title {
+    font-size: 1.5rem;
+  }
+
+  .header-nav-list-item {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .header-nav-list-item {
+    font-size: 2rem;
   }
 }

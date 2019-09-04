@@ -1,0 +1,83 @@
+.hero {
+  height: 100vh;
+  text-align: center;
+  padding-top: none;
+  border: 3rem solid white;
+  border-top: 4rem solid white;
+  border-bottom: 4rem solid white;
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  &-title {
+    font-family: $cursive;
+    font-size: 8rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+
+    // breakout font with pink textured background
+    background: url('../assets/pinktexture.jpg');
+    background-position: cover;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: $secondaryColor;
+  }
+
+  &-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1170px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 910px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 645px) {
+  .hero {
+    border: none;
+  }
+}
+
+@media (max-width: 525px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+  }
+}

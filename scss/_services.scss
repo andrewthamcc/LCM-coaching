@@ -1,0 +1,277 @@
+.services {
+  margin-top: 8vh;
+  padding: 2rem 0;
+
+  &-title {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  &-subtitle {
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+  }
+
+  &-text-list {
+    width: 90%;
+    margin: 3rem auto;
+    font-size: 1rem;
+    line-height: 1.8;
+
+    // accent first list item
+    li:first-of-type {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: $thirdColor;
+    }
+
+    // accent color of each list item "heading"
+    li span {
+      color: $secondaryColor;
+      font-style: italic;
+    }
+  }
+
+  // flex container for all service items
+  &-flex-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // each service item
+  &-item {
+    margin: 1rem auto;
+    width: 550px;
+
+    // fixed height for each logo
+    &-image {
+      height: 10rem;
+    }
+
+    &-title {
+      margin: 0.5rem 0;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      margin: 1rem 0;
+
+      // accent color for specific text
+      &-teal {
+        color: $thirdColor;
+        font-weight: 700;
+      }
+    }
+
+    blockquote {
+      line-height: 1.6;
+      font-style: italic;
+      color: $secondaryColor;
+
+      // author text
+      p:last-of-type {
+        font-weight: 400;
+        color: white;
+      }
+    }
+
+    &-text-list {
+      margin: 1rem 0;
+
+      li {
+        margin: 1rem 0;
+      }
+
+      &-topics {
+        display: flex;
+        color: $thirdColor;
+
+        li {
+          margin: 0 1rem;
+        }
+
+        li:first-of-type {
+          margin-left: 0;
+        }
+      }
+
+      &-sections {
+        list-style-type: disc;
+        margin-left: 1rem;
+      }
+    }
+
+    // hidden info of each service
+    &-more-info {
+      margin-top: 1rem;
+      display: none;
+    }
+
+    // more info button for each service item
+    &-button {
+      display: block;
+      margin-top: 1.5rem;
+    }
+
+    // close button for each service item
+    &-button-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+
+      background-color: $secondaryColor;
+      border: none;
+      border-radius: 50%;
+
+      padding: 20px;
+      line-height: 10px;
+      font-size: 20px;
+      font-weight: 300;
+
+      display: none;
+      transition: 0.3s all ease;
+    }
+
+    &-button-close:hover {
+      background-color: $thirdColor;
+    }
+  }
+
+  &-link {
+    color: white;
+    font-weight: 400;
+    transition: 0.3s color ease;
+    display: block;
+    margin-top: 2rem;
+    font-size: 1rem;
+
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.services-item {
+  // position relative to hold close button
+  position: relative;
+
+  // transition for when class open is applied
+  &.open {
+    border: 3px solid $secondaryColor;
+    border-radius: 10px;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+
+    order: 1;
+    flex: 1 1 100%;
+  }
+
+  // display the additional information
+  &-more-info.open {
+    display: block;
+  }
+
+  // remove more info button
+  &-button.open {
+    display: none;
+  }
+
+  // display close button
+  &-button-close.open {
+    display: block;
+  }
+}
+
+@media (max-width: 1230px) {
+  .services-item {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1115px) {
+  .services-item {
+    width: 400px;
+  }
+}
+
+@media (max-width: 915px) {
+  .services-item {
+    width: 350px;
+
+    &-image {
+      height: 8rem;
+    }
+  }
+}
+
+@media (max-width: 815px) {
+  .services-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid $secondaryColor;
+    border-radius: 10px;
+
+    padding: 0.5rem;
+
+    &-image {
+      height: 8rem;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .services-item.open {
+    padding: 1rem;
+  }
+
+  .services-item-text-list {
+    flex-direction: column;
+
+    li {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .services-title {
+    font-size: 1.5rem;
+  }
+
+  .services-subtitle {
+    font-size: 1rem;
+  }
+
+  .services-text-list {
+    font-size: 0.9rem;
+
+    li:first-of-type {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .services-title {
+    font-size: 1.3rem;
+  }
+
+  .services-subtitle {
+    font-size: 0.9rem;
+  }
+}

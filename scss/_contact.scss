@@ -1,0 +1,158 @@
+.contact {
+  margin-top: 8vh;
+  padding: 2rem 0;
+
+  &-title {
+    font-weight: 300;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  &-subtitle {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: $thirdColor;
+  }
+
+  input,
+  label,
+  textarea {
+    display: block;
+  }
+
+  label {
+    margin-top: 1.5rem;
+  }
+
+  // email contact form
+  &-form {
+    margin: 1rem auto;
+
+    &-input {
+      background-color: #fafafa;
+      border: none;
+
+      padding: 0.25rem 0.25rem;
+      width: 100%;
+    }
+
+    &-message {
+      height: 8rem;
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    &-submit {
+      margin: 1rem 0;
+    }
+  }
+
+  // flex container for email form and social media
+  &-flex-container {
+    display: flex;
+    margin-top: 5rem;
+
+    &-left {
+      width: 65%;
+      padding: 0 1rem;
+    }
+  }
+
+  // social media list
+  &-socialmedia {
+    width: 35%;
+    padding: 0 2rem;
+
+    &-list {
+      display: flex;
+      margin-top: 1rem;
+
+      &-item {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+      }
+
+      &-item a {
+        color: $secondaryColor;
+        transition: 0.3s color ease;
+      }
+
+      &-item a:hover {
+        color: $thirdColor;
+      }
+    }
+
+    &-list-item:first-of-type {
+      padding-left: 0;
+    }
+
+    &-list-item:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  // flex container for name and practice info
+  &-sub-flex-container {
+    display: flex;
+  }
+
+  &-sub-left,
+  &-sub-right {
+    width: 50%;
+  }
+
+  &-sub-left {
+    margin-right: 0.5rem;
+  }
+
+  &-sub-right {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 795px) {
+  .contact-flex-container {
+    flex-direction: column;
+  }
+
+  .contact-socialmedia {
+    order: -1;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .contact-flex-container-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-flex-container {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .contact-title {
+    font-size: 1.3rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-socialmedia-list-item {
+    font-size: 1.2rem;
+  }
+
+  .contact-flex-container-left,
+  .contact-socialmedia {
+    padding: 0;
+  }
+}

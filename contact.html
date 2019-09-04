@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <title>Laura Cafik Martin Coaching - Contact</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <nav class="header-nav">
+        <a href="./index.html" class="header-nav-title">Laura Cafik Martin</a>
+        <ul class="header-nav-list header-nav-list-white">
+          <li class="header-nav-list-item"><a href="./index.html#about">ABOUT</a></li>
+          <li class="header-nav-list-item"><a href="./services.html">SERVICES</a></li>
+          <li class="header-nav-list-item"><a href="./testimonials.html">TESTIMONIALS</a></li>
+          <li class="header-nav-list-item"><a href="./contact.html">CONTACT</a></li>
+        </ul>
+  
+        <button class="header-nav-hamburger">
+          <div class="header-nav-hamburger-line"></div>
+          <div class="header-nav-hamburger-line"></div>
+          <div class="header-nav-hamburger-line"></div>
+          <div class="header-nav-hamburger-line"></div>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <!-- header ends -->
+  
+  <section class="contact">
+    <div class="container"> 
+      <h2 class="contact-title">LET'S TALK!</h2>     
+
+      <!-- contact flex container -->
+      <div class="contact-flex-container">
+        <div class="contact-flex-container-left">
+          <h3 class="contact-subtitle">I'd love to hear from you</h3>
+          <!-- contact form -->
+          <form action="http://www.focuspocus.io/magic/92abcc8681f9289a341ccecb00412f97" method="POST" class="contact-form">
+            <div class="contact-sub-flex-container">
+              <div class="contact-sub-left">
+                <label for="contact-form-frst-name">First Name:</label>
+                <input type="text" class="contact-form-input" id='contact-form-first-name' name="first name">
+              </div>
+             
+              <div class="contact-sub-right">
+                <label for="contact-form-last-name">Last Name:</label>
+                <input type="text" class="contact-form-input" id='contact-form-last-name' name="last name">
+              </div>
+            </div>
+            
+            <div class="contact-sub-flex-container">
+              <div class="contact-sub-left">
+                <label for="contact-form-practice">Practice Name:</label>
+                <input type="text" class="contact-form-input" id='contact-form-practice' name="practice name">
+              </div>
+              
+              <div class="contact-sub-right">
+                <label for="contact-form-position">Position:</label>
+                <input type="text" class="contact-form-input" id='contact-form-position' name="position">
+              </div>
+            </div>
+
+            <label for="contact-form-email">Email:</label>
+            <input type="text" class="contact-form-input" id='contact-form-email' name="email">
+            
+            <label for="contact-form-message">How can I help you? Questions, Comments, Goals:</label>
+            <textarea class="contact-form-message" id="contact-form-message" cols="30" rows="10" name="message"></textarea>
+            
+            <label for="contact-form-submit" class="visuallyHidden">Submit</label>
+            <input type="submit" class="contact-form-submit button" id='contact-form-submit' value="SUBMIT">
+          </form><!-- contact form ends -->
+        </div><!-- left side flex container ends -->
+
+        <!-- social media contact -->
+        <div class="contact-socialmedia">
+          <h3 class="contact-subtitle">Connect</h3>
+          <ul class="contact-socialmedia-list">
+            <li class="contact-socialmedia-list-item">
+              <a href="mailto:lauracafikmartin@gmail.com">
+                <i class="far fa-envelope" aria-label="email Laura"></i>
+              </a>
+            </li>
+            <!-- <li class="contact-socialmedia-list-item">
+              <a href="#">
+                <i class="far fa-calendar" aria-label="Laura's calendly"></i>
+              </a>
+            </li> -->
+            <li class="contact-socialmedia-list-item">
+              <a href="https://www.linkedin.com/in/laura-cafik-martin-b55943b3/" target="_blank">
+                <i class="fab fa-linkedin-in" aria-label="Laura's LinkedIn"></i>
+              </a>
+            </li>
+            <li class="contact-socialmedia-list-item">
+              <a href="https://www.instagram.com/lc_mart/?hl=en" target="_blank">
+                <i class="fab fa-instagram" aria-label="Laura's Instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div><!-- contact social media ended-->
+      </div><!-- flex container ends -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container flex-container">
+      <p class="footer-copyright">&copy; 2019 Laura Cafik Martin Coaching</p>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
