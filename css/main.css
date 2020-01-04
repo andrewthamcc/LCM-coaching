@@ -1183,6 +1183,10 @@ img {
   width: 100%;
 }
 
+.contact-form-gotcha {
+  display: none !important;
+}
+
 .contact-form-submit {
   margin: 1rem 0;
 }
