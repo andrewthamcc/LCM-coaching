@@ -1,5 +1,5 @@
 // variables
-$cursive: 'Mrs Saint Delafield';
+$cursive: "Mrs Saint Delafield";
 $secondaryColor: #f2cac3;
 $thirdColor: #6adbc6;
 
@@ -13,13 +13,14 @@ body {
   background-color: #222222;
   color: white;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
 h1,
 h2,
 h3,
+h4,
 p,
 ul {
   margin: 0;

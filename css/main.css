@@ -206,13 +206,14 @@ body {
   font-size: 0.9rem;
   background-color: #222222;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
 
 h1,
 h2,
 h3,
+h4,
 p,
 ul {
   margin: 0;
@@ -830,29 +831,94 @@ img {
   font-style: italic;
 }
 
+.services-lcm {
+  width: 90%;
+  margin: 2rem auto 3rem;
+}
+
+.services-lcm-title {
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.services-lcm-subtitle {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.services-lcm-item {
+  margin: 2rem 0;
+}
+
+.services-lcm-item-title {
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.services-lcm-item-text {
+  line-height: 1.6;
+}
+
+.services-lcm-item-pricing {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.services-lcm-item ul {
+  width: 95%;
+  margin: 0.5rem auto;
+}
+
+.services-lcm-item li {
+  list-style: disc;
+  margin-left: 1rem;
+  line-height: 1.6;
+}
+
+.services-lcm-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services-lcm .button {
+  font-weight: 500;
+}
+
 .services-flex-container {
-  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 80%;
+  margin: 5rem auto 0;
 }
 
 .services-item {
-  margin: 1rem auto;
-  width: 550px;
+  margin: 0 auto;
+  width: 33%;
 }
 
 .services-item-image {
-  height: 10rem;
+  height: 4.5rem;
+  margin: 0 auto;
 }
 
 .services-item-title {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .services-item-text {
@@ -910,7 +976,7 @@ img {
 
 .services-item-button {
   display: block;
-  margin-top: 1.5rem;
+  margin: 0 auto;
 }
 
 .services-item-button-close {
@@ -963,6 +1029,14 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
+}
+
+.services-item.open .services-item-image {
+  margin: 0 0 1rem;
+}
+
+.services-item.open .services-item-title {
+  text-align-last: left;
 }
 
 .services-item-more-info.open {
