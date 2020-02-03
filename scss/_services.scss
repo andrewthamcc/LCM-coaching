@@ -55,6 +55,14 @@
       line-height: 1.6;
     }
 
+    &-quote {
+      color: $thirdColor;
+      font-size: 1.3rem;
+      font-style: italic;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
     &-item {
       margin: 2rem 0;
 
@@ -87,8 +95,21 @@
     }
 
     &-contact {
+      width: 65%;
+      margin: 0 auto;
+
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+
+      &-text {
+        font-size: 1.2rem;
+        font-style: italic;
+        line-height: 1.4;
+        color: $secondaryColor;
+        margin-bottom: 1rem;
+      }
     }
 
     .button {
