@@ -19,6 +19,12 @@
     width: 90%;
     margin: 2rem auto 0;
 
+    // quote mark
+    .quote {
+      color: $thirdColor;
+      font-size: 1.5rem;
+    }
+
     span {
       font-size: 1rem;
       line-height: 1.3;
@@ -74,13 +80,21 @@
     }
 
     &-subtitle {
-      font-weight: 300;
-      text-decoration: underline;
-      margin-top: 1rem;
+      font-weight: 700;
+      color: $thirdColor;
+      margin: 1rem 0;
     }
 
     &-text {
       margin: 0 0 1rem;
+
+      &.center {
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        color: $secondaryColor;
+        letter-spacing: 2px;
+        text-align: center;
+      }
 
       // accent color for specific text
       &-teal {
@@ -128,9 +142,11 @@
 
       &-topics {
         display: flex;
+        font-weight: 700;
         color: $thirdColor;
 
         li {
+          list-style: none;
           margin: 0 1rem;
         }
 
@@ -192,6 +208,26 @@
     &:hover,
     &:focus {
       color: $secondaryColor;
+    }
+  }
+
+  &-button {
+    background: $secondaryColor;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 55px;
+    transition: 0.3s all ease;
+    margin-top: 1rem;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      background-color: $thirdColor;
+    }
+
+    &:active {
+      background-color: darken($thirdColor, 10%);
     }
   }
 }
