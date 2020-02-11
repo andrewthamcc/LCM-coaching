@@ -62,12 +62,12 @@
 
   // each service item
   &-item {
-    margin: 1rem auto 2rem;
-    width: 50%;
+    margin: 1rem 2rem;
+    width: calc(33.3% - 4rem);
 
-    // fixed height for each logo
+    // fixed max height for each logo
     &-image {
-      height: 10rem;
+      max-height: 10rem;
       margin: 0 auto;
     }
 
@@ -183,11 +183,12 @@
       border: none;
       border-radius: 50%;
 
-      padding: 20px;
-      line-height: 10px;
       font-size: 20px;
-      font-weight: 300;
+      line-height: 40px;
+      width: 40px;
+      height: 40px;
 
+      display: flex;
       display: none;
       transition: 0.3s all ease;
     }
@@ -274,7 +275,7 @@
 
 @media (max-width: 1230px) {
   .services-item {
-    width: 500px;
+    width: 400px;
   }
 }
 
