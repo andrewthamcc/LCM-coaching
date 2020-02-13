@@ -1060,27 +1060,6 @@ img {
   display: block;
 }
 
-@media (max-width: 1230px) {
-  .services-item {
-    width: 400px;
-  }
-}
-
-@media (max-width: 1115px) {
-  .services-item {
-    width: 400px;
-  }
-}
-
-@media (max-width: 915px) {
-  .services-item {
-    width: 350px;
-  }
-  .services-item-image {
-    height: 8rem;
-  }
-}
-
 @media (max-width: 815px) {
   .services-item {
     width: 100%;
